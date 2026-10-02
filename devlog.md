@@ -9,3 +9,11 @@
 I read the project description and separated the work into the driver, encryption process, and logger. I chose Python because the course permits `subprocess`, and its standard library is enough for the required processes and pipes.
 
 Plan: create the repository and devlog first, then define the messages each child process will accept. I want the driver to own the interactive menu while the children each have one focused responsibility.
+
+## 2026-09-30 7:45 PM — Session reflection: Repository and process boundaries
+
+**Progress and next step:**
+
+The repository now has a short map of the three programs and the initial command-line shape. I have not implemented the children yet. The main design decision is to use one line per request so each response can be read without ambiguity.
+
+Next session: make the logger accept a file path and append timestamped action/message lines until `QUIT`.
