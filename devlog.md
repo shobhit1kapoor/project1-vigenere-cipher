@@ -17,3 +17,11 @@ Plan: create the repository and devlog first, then define the messages each chil
 The repository now has a short map of the three programs and the initial command-line shape. I have not implemented the children yet. The main design decision is to use one line per request so each response can be read without ambiguity.
 
 Next session: make the logger accept a file path and append timestamped action/message lines until `QUIT`.
+
+## 2026-10-02 6:05 PM — Session start: Logger process
+
+**Thoughts and plan:**
+
+Since the last session I settled the logging protocol: the first token is an action, followed by the message. The driver should not open the log directly; it should send records to the logger over the logger's standard input.
+
+Plan: implement append mode, local 24-hour timestamps, and a clean `QUIT` path. I will flush each record so it is written during the run.
