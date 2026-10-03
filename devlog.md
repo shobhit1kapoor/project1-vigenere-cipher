@@ -25,3 +25,11 @@ Next session: make the logger accept a file path and append timestamped action/m
 Since the last session I settled the logging protocol: the first token is an action, followed by the message. The driver should not open the log directly; it should send records to the logger over the logger's standard input.
 
 Plan: implement append mode, local 24-hour timestamps, and a clean `QUIT` path. I will flush each record so it is written during the run.
+
+## 2026-10-02 7:45 PM — Session reflection: Logger process
+
+**Progress and next step:**
+
+The logger now opens the requested path in append mode, formats each message as `YYYY-MM-DD HH:MM [ACTION] MESSAGE`, and exits on `QUIT`. I kept file handling in that process so the driver remains a client of the logging protocol.
+
+Next session: implement the cipher process and its remembered key.
