@@ -33,3 +33,11 @@ Plan: implement append mode, local 24-hour timestamps, and a clean `QUIT` path. 
 The logger now opens the requested path in append mode, formats each message as `YYYY-MM-DD HH:MM [ACTION] MESSAGE`, and exits on `QUIT`. I kept file handling in that process so the driver remains a client of the logging protocol.
 
 Next session: implement the cipher process and its remembered key.
+
+## 2026-10-04 6:05 PM — Session start: Vigenere command process
+
+**Thoughts and plan:**
+
+The logger protocol is straightforward. The cipher process needs to keep a key between commands, and it should report an error if encryption or decryption happens before `PASS`. The assignment's example gives a useful known answer for checking the implementation.
+
+Plan: add `PASS`, `ENCRYPT`, `DECRYPT`, and `QUIT`, with one `RESULT` or `ERROR` line per request.
