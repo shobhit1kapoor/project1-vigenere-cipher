@@ -41,3 +41,11 @@ Next session: implement the cipher process and its remembered key.
 The logger protocol is straightforward. The cipher process needs to keep a key between commands, and it should report an error if encryption or decryption happens before `PASS`. The assignment's example gives a useful known answer for checking the implementation.
 
 Plan: add `PASS`, `ENCRYPT`, `DECRYPT`, and `QUIT`, with one `RESULT` or `ERROR` line per request.
+
+## 2026-10-04 7:45 PM — Session reflection: Vigenere command process
+
+**Progress and next step:**
+
+The cipher process now maintains its passkey and transforms A-Z text with a repeating Vigenere key. It normalizes case and rejects inputs outside letters. The passkey is not echoed in the response.
+
+Next session: connect the driver to the two children and verify the line-oriented shape during integration.
