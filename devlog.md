@@ -49,3 +49,11 @@ Plan: add `PASS`, `ENCRYPT`, `DECRYPT`, and `QUIT`, with one `RESULT` or `ERROR`
 The cipher process now maintains its passkey and transforms A-Z text with a repeating Vigenere key. It normalizes case and rejects inputs outside letters. The passkey is not echoed in the response.
 
 Next session: connect the driver to the two children and verify the line-oriented shape during integration.
+
+## 2026-10-06 6:05 PM — Session start: Driver process launch
+
+**Thoughts and plan:**
+
+The logger and cipher can now run independently. The driver is responsible for starting both programs, passing the log path to the logger, and keeping the interactive prompts separate from the child protocols.
+
+Plan: use `subprocess.Popen` with text-mode stdin/stdout pipes and wire the basic password/encrypt/decrypt/quit path.
