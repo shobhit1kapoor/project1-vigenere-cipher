@@ -57,3 +57,11 @@ Next session: connect the driver to the two children and verify the line-oriente
 The logger and cipher can now run independently. The driver is responsible for starting both programs, passing the log path to the logger, and keeping the interactive prompts separate from the child protocols.
 
 Plan: use `subprocess.Popen` with text-mode stdin/stdout pipes and wire the basic password/encrypt/decrypt/quit path.
+
+## 2026-10-06 7:45 PM — Session reflection: Driver process launch
+
+**Progress and next step:**
+
+The first driver version launches both child programs and flushes each command before reading the cipher response. It can set a key and request a transformation. The interface still prompts only for new values, and command results are not yet retained.
+
+Next session: add a current-run history menu and make it possible to back out to a new value.
