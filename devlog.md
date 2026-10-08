@@ -65,3 +65,11 @@ Plan: use `subprocess.Popen` with text-mode stdin/stdout pipes and wire the basi
 The first driver version launches both child programs and flushes each command before reading the cipher response. It can set a key and request a transformation. The interface still prompts only for new values, and command results are not yet retained.
 
 Next session: add a current-run history menu and make it possible to back out to a new value.
+
+## 2026-10-08 6:05 PM — Session start: History menu
+
+**Thoughts and plan:**
+
+The initial driver proves the pipe path, but it does not meet the history requirements. The history should contain entered encryption/decryption values and successful outputs for this run only. A newly entered password must not be added.
+
+Plan: add a numbered history picker with `n` for a new value and `q` to cancel, then store successful transformation results.
