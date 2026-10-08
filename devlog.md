@@ -73,3 +73,11 @@ Next session: add a current-run history menu and make it possible to back out to
 The initial driver proves the pipe path, but it does not meet the history requirements. The history should contain entered encryption/decryption values and successful outputs for this run only. A newly entered password must not be added.
 
 Plan: add a numbered history picker with `n` for a new value and `q` to cancel, then store successful transformation results.
+
+## 2026-10-08 7:45 PM — Session reflection: History menu
+
+**Progress and next step:**
+
+The driver now keeps values in memory, displays numbered entries, and lets the user choose an old value, enter a new one, or cancel. New passwords are kept out of history; successful cipher results are added.
+
+Next session: enforce letters-only input in the driver and make errors readable without sending malformed strings to the cipher.
