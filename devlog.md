@@ -89,3 +89,11 @@ Next session: enforce letters-only input in the driver and make errors readable 
 The history flow is in place. I want invalid values rejected before they cross the process boundary, while keeping the cipher defensive in case it is used directly. The UI should also preserve the assignment's case-insensitive behavior.
 
 Plan: integrate strict ASCII-letter validation, handle `ERROR` responses, and make cancellation and end-of-input return cleanly.
+
+## 2026-10-10 7:45 PM — Session reflection: Validation and response handling
+
+**Progress and next step:**
+
+The driver now validates password and cipher inputs, normalizes values before sending them, and displays backend errors. Inputs entered for encryption/decryption remain in history even if validation rejects them, while passwords stay excluded.
+
+Next session: log commands and outcomes without including password values, then make shutdown reap both children.
