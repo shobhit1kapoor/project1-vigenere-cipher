@@ -81,3 +81,11 @@ Plan: add a numbered history picker with `n` for a new value and `q` to cancel, 
 The driver now keeps values in memory, displays numbered entries, and lets the user choose an old value, enter a new one, or cancel. New passwords are kept out of history; successful cipher results are added.
 
 Next session: enforce letters-only input in the driver and make errors readable without sending malformed strings to the cipher.
+
+## 2026-10-10 6:05 PM — Session start: Validation and response handling
+
+**Thoughts and plan:**
+
+The history flow is in place. I want invalid values rejected before they cross the process boundary, while keeping the cipher defensive in case it is used directly. The UI should also preserve the assignment's case-insensitive behavior.
+
+Plan: integrate strict ASCII-letter validation, handle `ERROR` responses, and make cancellation and end-of-input return cleanly.
