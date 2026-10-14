@@ -21,6 +21,7 @@ class ProjectSession:
         self.history = []
         self.logger = None
         self.encryptor = None
+        self.logger_warning_shown = False
 
         try:
             self.logger = subprocess.Popen(
@@ -47,7 +48,12 @@ class ProjectSession:
 
     def log(self, action, message):
         """Send one protocol line to the logger process."""
-        if self.logger is None or self.logger.poll() is not None:
+        if self.logger is None:
+            return
+        if self.logger.poll() is not None:
+            if not self.logger_warning_shown:
+                print("Warning: the logger process stopped unexpectedly.", file=sys.stderr)
+                self.logger_warning_shown = True
             return
         if self.logger.stdin is None:
             return
