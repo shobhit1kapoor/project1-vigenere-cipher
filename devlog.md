@@ -97,3 +97,11 @@ Plan: integrate strict ASCII-letter validation, handle `ERROR` responses, and ma
 The driver now validates password and cipher inputs, normalizes values before sending them, and displays backend errors. Inputs entered for encryption/decryption remain in history even if validation rejects them, while passwords stay excluded.
 
 Next session: log commands and outcomes without including password values, then make shutdown reap both children.
+
+## 2026-10-12 6:05 PM — Session start: Logging and process shutdown
+
+**Thoughts and plan:**
+
+The driver now covers the main commands, but the assignment also expects command/results to be logged and both children to receive `QUIT`. The passkey must never be logged. A pipe write should be flushed before waiting for a response or child exit.
+
+Plan: add start, command, result, error, and exit records; redact passkey input; close pipes and wait for the child processes.
