@@ -105,3 +105,11 @@ Next session: log commands and outcomes without including password values, then 
 The driver now covers the main commands, but the assignment also expects command/results to be logged and both children to receive `QUIT`. The passkey must never be logged. A pipe write should be flushed before waiting for a response or child exit.
 
 Plan: add start, command, result, error, and exit records; redact passkey input; close pipes and wait for the child processes.
+
+## 2026-10-12 7:45 PM — Session reflection: Logging and process shutdown
+
+**Progress and next step:**
+
+The driver now sends structured records to the logger and keeps password values out of those records. The command loop records cancellation and errors too. Shutdown sends `QUIT`, closes the streams, and waits for each child.
+
+Next session: finish the README with file roles, both common launch commands, and the exact user flow.
