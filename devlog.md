@@ -113,3 +113,11 @@ Plan: add start, command, result, error, and exit records; redact passkey input;
 The driver now sends structured records to the logger and keeps password values out of those records. The command loop records cancellation and errors too. Shutdown sends `QUIT`, closes the streams, and waits for each child.
 
 Next session: finish the README with file roles, both common launch commands, and the exact user flow.
+
+## 2026-10-14 6:05 PM — Session start: Documentation and packaging notes
+
+**Thoughts and plan:**
+
+The main program flow is assembled. The README should tell someone how to run the driver from a command line, what each file does, and how the history and password rules work. Generated logs and Python cache files should stay out of Git.
+
+Plan: polish the documentation, add ignore patterns, and note that the repository ZIP must include `.git` for the grader to see its history.
