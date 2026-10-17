@@ -64,3 +64,6 @@ perform manual checks before relying on it.
 For an actual submission, follow the course instructions: review the project, make sure the
 working tree is clean, include a README and devlog, and ZIP the whole Git repository,
 including `.git`.
+
+
+This reference copy's `Jonathan` author and every-other-day commit dates are simulated. They illustrate a process record and must not be mistaken for actual activity.
