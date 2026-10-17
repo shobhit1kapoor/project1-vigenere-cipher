@@ -129,3 +129,11 @@ Plan: polish the documentation, add ignore patterns, and note that the repositor
 The README now describes the three programs, process communication, command menu, input rules, and run commands for Windows and Linux/macOS. `.gitignore` excludes generated logs and Python caches.
 
 Next session: make a final review against the assignment checklist and prepare a complete repository archive. The history in this reference model is intentionally marked as illustrative.
+
+## 2026-10-16 6:05 PM — Session start: Final review and archive
+
+**Thoughts and plan:**
+
+I am at the final session before the posted deadline. I am checking that the README, source files, devlog, and Git metadata are all part of the project folder. The course rubric places substantial weight on the development record, so a real student should keep making their own entries throughout their actual sessions.
+
+Plan: add a clear reference-only notice and packaging guidance, confirm the repository is clean, and create a ZIP that preserves `.git`.
