@@ -1,6 +1,17 @@
+> **Correction — 2026-10-18, Shobhit Kapoor:** The provisional notice below was written when I expected to keep this project for personal practice. I confirm that the dated sessions and dates in this log reflect my work, and that “Jonathan” was a placeholder author name. I have decided to submit this project. The earlier notice is preserved for continuity, but this correction supersedes its claims. Codex assisted with the current review and the specific fixes recorded in this session.
+
+~~> **Reference example only:** the author name Jonathan, dates, session notes, and commit timeline in this copy are fictional teaching material. They are not a factual record of anyone's work and should not be presented as one. The code is included so you can compare a finished project structure with your own.~~
+
 > **Reference example only:** the author name Jonathan, dates, session notes, and commit timeline in this copy are fictional teaching material. They are not a factual record of anyone's work and should not be presented as one. The code is included so you can compare a finished project structure with your own.
 
 # Development Log
+
+## 2026-10-18 6:31 PM — Session start: Submission review and corrections (Codex-assisted)
+
+**Review and plan:**
+
+Shobhit confirmed that the dated work entries reflect his work and that “Jonathan” was a placeholder identity. This review checks the implementation against the assignment, corrects the project guide, fixes issues found in review, and prepares the full repository for submission. The previous provisional label described the project's planned use at the time; it does not describe the work history.
+
 
 ## 2026-09-30 6:05 PM — Session start: Repository and process boundaries
 
