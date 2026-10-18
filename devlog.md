@@ -154,3 +154,11 @@ The reference copy now has a complete file set and an archive that includes its 
 The source has not been run or tested in this session. A real developer should perform the manual checks described by the assignment before relying on or submitting their own implementation.
 
 **Correction recorded 2026-10-18:** This closing note described the project's planned use at the time; Shobhit now confirms that the dated work entries are real and is preparing this project for submission. The project has since been manually checked as recorded in the current session.
+
+## 2026-10-18 6:33 PM — Session reflection: Final review and submission package (Codex-assisted)
+
+**Progress and checks:**
+
+The README now explains the commands, input rules, process layout, and launch instructions. Review fixes preserve newly entered blank cipher inputs in history and parse logger actions across whitespace. Manual checks passed for Python syntax, the cipher known-answer example and decryption, logger parsing, interactive history, password redaction, and child-process shutdown. The 27 original commits keep their confirmed dates and subjects; the author and committer names now use Shobhit Kapoor. New work is dated October 18, 2026.
+
+The public repository is `https://github.com/shobhit1kapoor/project1-vigenere-cipher`. I created a ZIP containing the repository and `.git`, extracted it, and confirmed the checkout is clean and its Git objects are valid. That archive has 31 commits before this closing entry; it will be refreshed after this commit so the submitted copy contains the complete history.
