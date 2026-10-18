@@ -188,9 +188,8 @@ class ProjectSession:
             self.log("RESULT", "{} command cancelled at input".format(action))
             return
 
-        # Keep each nonempty newly entered string in this run's history, even
-        # when validation rejects it, as the assignment asks to retain inputs.
-        if is_new and value:
+        # Keep each newly entered string in history, including rejected input.
+        if is_new:
             self.history.append(value)
 
         if not self.valid_letters(value):
@@ -210,7 +209,7 @@ class ProjectSession:
             self.log("ERROR", "{} {}".format(action, message or "operation failed"))
 
     def run(self):
-        print("Project 1: process and pipe demonstration")
+        print("Project 1: Process-Based Vigenere Cipher")
         print("Commands: password, encrypt, decrypt, history, quit")
 
         while True:

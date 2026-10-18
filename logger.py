@@ -15,9 +15,13 @@ def run(log_path):
                 if not line:
                     continue
 
-                action, separator, message = line.partition(" ")
+                parts = line.split(maxsplit=1)
+                if not parts:
+                    continue
+                action = parts[0]
+                message = parts[1] if len(parts) == 2 else ""
                 timestamp = datetime.now().astimezone().strftime("%Y-%m-%d %H:%M")
-                if separator:
+                if message:
                     log_file.write("{} [{}] {}\n".format(timestamp, action, message))
                 else:
                     log_file.write("{} [{}]\n".format(timestamp, action))
