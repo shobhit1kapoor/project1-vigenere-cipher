@@ -1,24 +1,20 @@
-# Project 1: Process-Based Vigenere Cipher
+# Project 1: Vigenere Cipher
 
 **Author:** Shobhit Kapoor
 
-This program encrypts and decrypts alphabetic strings with a repeating-key Vigenere cipher. The interactive driver starts two child processes: one handles cipher commands, and the other writes activity records. The processes communicate through standard-input and standard-output pipes. The project uses only the Python standard library.
+This project has three Python programs. `driver.py` handles the menu and starts `encryptor.py` and `logger.py` as child processes. The driver sends commands to them through standard input and reads their responses through standard output. The project uses Python's standard library only.
 
 ## Files
 
-- `driver.py` — interactive menu, input checks, child-process management, and current-run history.
-- `encryptor.py` — line-based `PASS`, `ENCRYPT`, `DECRYPT`, and `QUIT` command handler.
-- `logger.py` — appends timestamped action and result records to the selected log file.
-- `devlog.md` — dated work-session notes and project corrections.
-- `.gitignore` — excludes Python cache files and generated `.log` files.
-
-## Requirements
-
-Python 3.7 or newer. No packages need to be installed.
+- `driver.py` — menu, input checks, process communication, and history for the current run.
+- `encryptor.py` — handles `PASS`, `ENCRYPT`, `DECRYPT`, and `QUIT` commands and performs the Vigenere cipher.
+- `logger.py` — appends timestamped activity records to the log file.
+- `devlog.md` — development notes and corrections.
+- `.gitignore` — excludes Python cache files and generated log files.
 
 ## Run
 
-From this directory, start the driver and choose a path for the activity log:
+Python 3.7 or newer is required. No packages need to be installed. Run the driver from this directory and give it a log file path:
 
 **Windows**
 
@@ -32,30 +28,24 @@ py -3 .\driver.py activity.log
 python3 driver.py activity.log
 ```
 
-The log is created if it does not exist. Later runs append to the same file. A relative path such as `activity.log` is resolved from the directory where the command is run.
+The logger creates the file if needed and appends to it on later runs. Relative paths are resolved from the directory where the command is run.
 
-## Commands
+## Using the program
 
-At the `command>` prompt, enter one of these commands:
+At `command>`, enter `password`, `encrypt`, `decrypt`, `history`, or `quit`. For a password or cipher input, choose `n` to enter a new value, `h` to select one from history, or `q` to cancel. Inputs can use upper- or lowercase ASCII letters only.
 
-- `password` — set the key. The key must contain only letters.
-- `encrypt` — encrypt a new string or a string from history.
-- `decrypt` — decrypt a new string or a string from history.
-- `history` — list cipher inputs and successful results entered during this run.
-- `quit` — stop the driver and both child processes.
+History lasts until the program exits. Each new encryption or decryption input is saved, including an input rejected by validation. Successful results are saved too. Passwords are not added to history and their values are not written to the activity log.
 
-For a password, encryption input, or decryption input, choose `n` to enter a new value, `h` to select from history where available, or `q` to cancel the command. Inputs are case-insensitive and may contain ASCII letters only. The driver stores each newly entered cipher input in history even when it is rejected, and adds successful results. Passwords are excluded from both history and the activity log. History is kept in memory for the current run and is cleared when the program exits.
+For example, with key `LEMON`, encrypting `ATTACKATDAWN` gives `LXFOPVEFRNHR`.
 
-The cipher process returns a `RESULT` or `ERROR` line for each command. For example, key `LEMON` encrypts `ATTACKATDAWN` to `LXFOPVEFRNHR`.
+## Activity log
 
-The logger writes records in this format, using the computer's local time:
+The logger uses the computer's local time and writes one record per line:
 
 ```text
 YYYY-MM-DD HH:MM [ACTION] MESSAGE
 ```
 
-The driver logs commands and outcomes without writing password values. The repository includes its Git history; the course archive should include the `.git` directory as specified in the project instructions.
+The repository includes its Git history. The exact times for the first 27 commits were not saved; with my instructor's approval, I estimated them from memory. They use Chicago local time (UTC−05:00). Later review commits use the times when that work was done. The development log records this history and its limits. Codex assisted with the review and fixes recorded in the development log.
 
-## Commit timestamps
-
-The timestamps for the first 27 commits are approximate reconstructions from Shobhit Kapoor’s recollection, with the instructor’s approval; they are not exact saved times. They use Chicago local time (UTC−05:00) and follow the reported work period and time windows. The later review commits are dated when that work was done. The development log records the estimate and its limits.
+Include the `.git` directory when creating the course submission ZIP so the commit history is available.

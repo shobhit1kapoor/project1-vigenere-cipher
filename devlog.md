@@ -1,3 +1,11 @@
+> **Status correction — 2026-10-18, Shobhit Kapoor:** I first kept this as a practice project and described it as a reference copy because I did not plan to submit it. I have since decided to submit the project. The code and work descriptions are mine. I did not save exact timestamps for the first 27 commits; with my instructor's approval, I estimated them from memory. This corrects the older line below that calls the author and dated history fictional examples: the name was a placeholder, and the dates are estimates. Codex assisted with the October 18 review and fixes.
+
+## 2026-10-18 7:24 PM — Session start: Assignment audit
+
+**Thoughts and plan:**
+
+I am checking the project against the assignment description, the rubric, and the Git instructions. I will review the program flow, README, development log, repository status, and submission ZIP, then record any issues and checks from this review.
+
 > **Correction — 2026-10-18, Shobhit Kapoor:** Shobhit reports that the work descriptions below are his, but exact timestamps for the first 27 commits were not retained. On October 18, those timestamps were reconstructed approximately from his recollection, with instructor approval: work began October 1, usually occurred 7–9 p.m. or midnight–3 a.m., and did not occur October 5, 6, 9–12, or 17. “Jonathan” was a placeholder author name. Earlier personal-practice wording reflects his plan at the time. Codex assisted with the current review and fixes. The five October 18 review commits retain their actual timestamps.
 
 # Development Log
@@ -162,3 +170,11 @@ The source has not been run or tested in this session. A real developer should p
 The README now explains the commands, input rules, process layout, and launch instructions. Review fixes preserve newly entered blank cipher inputs in history and parse logger actions across whitespace. Manual checks passed for Python syntax, the cipher known-answer example and decryption, logger parsing, interactive history, password redaction, and child-process shutdown. The 27 earlier commits keep their subjects and work descriptions; their timestamps have been reconstructed approximately and are identified as estimates above. The author and committer names use Shobhit Kapoor. New review work is dated October 18, 2026.
 
 The public repository is `https://github.com/shobhit1kapoor/project1-vigenere-cipher`. I created a ZIP containing the repository and `.git`, extracted it, and confirmed the checkout is clean and its Git objects are valid. That archive has 31 commits before this closing entry; it will be refreshed after this commit so the submitted copy contains the complete history.
+
+## 2026-10-18 7:24 PM — Session reflection: Assignment audit (Codex-assisted)
+
+**Progress and checks:**
+
+I compared the project with the assignment description, rubric, and Git instructions. The code has the required driver, cipher, and logger processes; the driver connects to both children with pipes, and the command protocol, history, input checks, and password handling match the stated requirements. I rewrote the README to explain the files and run commands in plainer language, and added a correction that explains why the older log entries describe this as a reference copy.
+
+Manual checks passed for Python syntax, the Vigenere example and decryption, choosing a value from history, saving a blank rejected input, the logger's whitespace parsing and record format, password redaction, and clean process shutdown. The first 27 commit timestamps remain identified as estimates made with instructor approval. I will refresh the repository ZIP after committing this review.
