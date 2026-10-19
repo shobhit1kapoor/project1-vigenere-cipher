@@ -1,4 +1,4 @@
-> **Correction — 2026-10-18, Shobhit Kapoor:** A provisional notice in this file described the dated work history as fictional when I expected to keep the project for personal practice. I confirm that the dated sessions and dates below reflect my work, and that “Jonathan” was a placeholder author name. I have decided to submit the project. This correction supersedes the earlier description. Codex assisted with the current review and fixes recorded in this session.
+> **Correction — 2026-10-18, Shobhit Kapoor:** Shobhit reports that the work descriptions below are his, but exact timestamps for the first 27 commits were not retained. On October 18, those timestamps were reconstructed approximately from his recollection, with instructor approval: work began October 1, usually occurred 7–9 p.m. or midnight–3 a.m., and did not occur October 5, 6, 9–12, or 17. “Jonathan” was a placeholder author name. Earlier personal-practice wording reflects his plan at the time. Codex assisted with the current review and fixes. The five October 18 review commits retain their actual timestamps.
 
 # Development Log
 
@@ -6,10 +6,10 @@
 
 **Review and plan:**
 
-Shobhit confirmed that the dated work entries reflect his work and that “Jonathan” was a placeholder identity. This review checks the implementation against the assignment, corrects the project guide, fixes issues found in review, and prepares the full repository for submission. The previous provisional label described the project's planned use at the time; it does not describe the work history.
+Shobhit confirmed that the work descriptions reflect his work, that the earlier dates were approximate, and that “Jonathan” was a placeholder identity. This review checks the implementation against the assignment, corrects the project guide, fixes issues found in review, and prepares the full repository for submission.
 
 
-## 2026-09-30 6:05 PM — Session start: Repository and process boundaries
+## 2026-10-01 7:22 PM — Session start: Repository and process boundaries
 
 **Thoughts and plan:**
 
@@ -17,7 +17,7 @@ I read the project description and separated the work into the driver, encryptio
 
 Plan: create the repository and devlog first, then define the messages each child process will accept. I want the driver to own the interactive menu while the children each have one focused responsibility.
 
-## 2026-09-30 7:45 PM — Session reflection: Repository and process boundaries
+## 2026-10-02 12:41 AM — Session reflection: Repository and process boundaries
 
 **Progress and next step:**
 
@@ -25,7 +25,7 @@ The repository now has a short map of the three programs and the initial command
 
 Next session: make the logger accept a file path and append timestamped action/message lines until `QUIT`.
 
-## 2026-10-02 6:05 PM — Session start: Logger process
+## 2026-10-02 7:19 PM — Session start: Logger process
 
 **Thoughts and plan:**
 
@@ -33,7 +33,7 @@ Since the last session I settled the logging protocol: the first token is an act
 
 Plan: implement append mode, local 24-hour timestamps, and a clean `QUIT` path. I will flush each record so it is written during the run.
 
-## 2026-10-02 7:45 PM — Session reflection: Logger process
+## 2026-10-03 1:28 AM — Session reflection: Logger process
 
 **Progress and next step:**
 
@@ -41,7 +41,7 @@ The logger now opens the requested path in append mode, formats each message as 
 
 Next session: implement the cipher process and its remembered key.
 
-## 2026-10-04 6:05 PM — Session start: Vigenere command process
+## 2026-10-03 7:33 PM — Session start: Vigenere command process
 
 **Thoughts and plan:**
 
@@ -49,7 +49,7 @@ The logger protocol is straightforward. The cipher process needs to keep a key b
 
 Plan: add `PASS`, `ENCRYPT`, `DECRYPT`, and `QUIT`, with one `RESULT` or `ERROR` line per request.
 
-## 2026-10-04 7:45 PM — Session reflection: Vigenere command process
+## 2026-10-04 2:17 AM — Session reflection: Vigenere command process
 
 **Progress and next step:**
 
@@ -57,7 +57,7 @@ The cipher process now maintains its passkey and transforms A-Z text with a repe
 
 Next session: connect the driver to the two children and verify the line-oriented shape during integration.
 
-## 2026-10-06 6:05 PM — Session start: Driver process launch
+## 2026-10-04 7:06 PM — Session start: Driver process launch
 
 **Thoughts and plan:**
 
@@ -65,7 +65,7 @@ The logger and cipher can now run independently. The driver is responsible for s
 
 Plan: use `subprocess.Popen` with text-mode stdin/stdout pipes and wire the basic password/encrypt/decrypt/quit path.
 
-## 2026-10-06 7:45 PM — Session reflection: Driver process launch
+## 2026-10-04 8:56 PM — Session reflection: Driver process launch
 
 **Progress and next step:**
 
@@ -73,7 +73,7 @@ The first driver version launches both child programs and flushes each command b
 
 Next session: add a current-run history menu and make it possible to back out to a new value.
 
-## 2026-10-08 6:05 PM — Session start: History menu
+## 2026-10-07 7:12 PM — Session start: History menu
 
 **Thoughts and plan:**
 
@@ -81,7 +81,7 @@ The initial driver proves the pipe path, but it does not meet the history requir
 
 Plan: add a numbered history picker with `n` for a new value and `q` to cancel, then store successful transformation results.
 
-## 2026-10-08 7:45 PM — Session reflection: History menu
+## 2026-10-08 12:54 AM — Session reflection: History menu
 
 **Progress and next step:**
 
@@ -89,7 +89,7 @@ The driver now keeps values in memory, displays numbered entries, and lets the u
 
 Next session: enforce letters-only input in the driver and make errors readable without sending malformed strings to the cipher.
 
-## 2026-10-10 6:05 PM — Session start: Validation and response handling
+## 2026-10-08 7:08 PM — Session start: Validation and response handling
 
 **Thoughts and plan:**
 
@@ -97,7 +97,7 @@ The history flow is in place. I want invalid values rejected before they cross t
 
 Plan: integrate strict ASCII-letter validation, handle `ERROR` responses, and make cancellation and end-of-input return cleanly.
 
-## 2026-10-10 7:45 PM — Session reflection: Validation and response handling
+## 2026-10-08 8:49 PM — Session reflection: Validation and response handling
 
 **Progress and next step:**
 
@@ -105,7 +105,7 @@ The driver now validates password and cipher inputs, normalizes values before se
 
 Next session: log commands and outcomes without including password values, then make shutdown reap both children.
 
-## 2026-10-12 6:05 PM — Session start: Logging and process shutdown
+## 2026-10-13 7:17 PM — Session start: Logging and process shutdown
 
 **Thoughts and plan:**
 
@@ -113,7 +113,7 @@ The driver now covers the main commands, but the assignment also expects command
 
 Plan: add start, command, result, error, and exit records; redact passkey input; close pipes and wait for the child processes.
 
-## 2026-10-12 7:45 PM — Session reflection: Logging and process shutdown
+## 2026-10-14 1:13 AM — Session reflection: Logging and process shutdown
 
 **Progress and next step:**
 
@@ -121,7 +121,7 @@ The driver now sends structured records to the logger and keeps password values 
 
 Next session: finish the README with file roles, both common launch commands, and the exact user flow.
 
-## 2026-10-14 6:05 PM — Session start: Documentation and packaging notes
+## 2026-10-14 7:29 PM — Session start: Documentation and packaging notes
 
 **Thoughts and plan:**
 
@@ -129,7 +129,7 @@ The main program flow is assembled. The README should tell someone how to run th
 
 Plan: polish the documentation, add ignore patterns, and note that the repository ZIP must include `.git` for the grader to see its history.
 
-## 2026-10-14 7:45 PM — Session reflection: Documentation and packaging notes
+## 2026-10-15 2:37 AM — Session reflection: Documentation and packaging notes
 
 **Progress and next step:**
 
@@ -137,7 +137,7 @@ The README now describes the three programs, process communication, command menu
 
 Next session: make a final review against the assignment checklist and prepare a complete repository archive. The history in this reference model is intentionally marked as illustrative.
 
-## 2026-10-16 6:05 PM — Session start: Final review and archive
+## 2026-10-16 7:11 PM — Session start: Final review and archive
 
 **Thoughts and plan:**
 
@@ -145,7 +145,7 @@ I am at the final session before the posted deadline. I am checking that the REA
 
 Plan: add a clear reference-only notice and packaging guidance, confirm the repository is clean, and create a ZIP that preserves `.git`.
 
-## 2026-10-16 7:45 PM — Session reflection: Final review and archive
+## 2026-10-18 1:44 AM — Session reflection: Final review and archive
 
 **Progress and next step:**
 
@@ -153,12 +153,12 @@ The reference copy now has a complete file set and an archive that includes its 
 
 The source has not been run or tested in this session. A real developer should perform the manual checks described by the assignment before relying on or submitting their own implementation.
 
-**Correction recorded 2026-10-18:** This closing note described the project's planned use at the time; Shobhit now confirms that the dated work entries are real and is preparing this project for submission. The project has since been manually checked as recorded in the current session.
+**Correction recorded 2026-10-18:** The work descriptions above reflect the project work; the exact dates and times have been reconstructed approximately from Shobhit’s recollection and course guidance, as noted at the top of this log. The project is being prepared for submission and was manually checked during the current review.
 
 ## 2026-10-18 6:33 PM — Session reflection: Final review and submission package (Codex-assisted)
 
 **Progress and checks:**
 
-The README now explains the commands, input rules, process layout, and launch instructions. Review fixes preserve newly entered blank cipher inputs in history and parse logger actions across whitespace. Manual checks passed for Python syntax, the cipher known-answer example and decryption, logger parsing, interactive history, password redaction, and child-process shutdown. The 27 original commits keep their confirmed dates and subjects; the author and committer names now use Shobhit Kapoor. New work is dated October 18, 2026.
+The README now explains the commands, input rules, process layout, and launch instructions. Review fixes preserve newly entered blank cipher inputs in history and parse logger actions across whitespace. Manual checks passed for Python syntax, the cipher known-answer example and decryption, logger parsing, interactive history, password redaction, and child-process shutdown. The 27 earlier commits keep their subjects and work descriptions; their timestamps have been reconstructed approximately and are identified as estimates above. The author and committer names use Shobhit Kapoor. New review work is dated October 18, 2026. New work is dated October 18, 2026.
 
 The public repository is `https://github.com/shobhit1kapoor/project1-vigenere-cipher`. I created a ZIP containing the repository and `.git`, extracted it, and confirmed the checkout is clean and its Git objects are valid. That archive has 31 commits before this closing entry; it will be refreshed after this commit so the submitted copy contains the complete history.

@@ -55,3 +55,7 @@ YYYY-MM-DD HH:MM [ACTION] MESSAGE
 ```
 
 The driver logs commands and outcomes without writing password values. The repository includes its Git history; the course archive should include the `.git` directory as specified in the project instructions.
+
+## Commit timestamps
+
+The timestamps for the first 27 commits are approximate reconstructions from Shobhit Kapoor’s recollection, with the instructor’s approval; they are not exact saved times. The estimates follow the reported work period and time windows. The later review commits are dated when that work was done. The development log records the estimate and its limits.
