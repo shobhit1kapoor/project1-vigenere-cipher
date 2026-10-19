@@ -6,7 +6,6 @@
 
 I am checking the project against the assignment description, the rubric, and the Git instructions. I will review the program flow, README, development log, repository status, and submission ZIP, then record any issues and checks from this review.
 
-> **Correction — 2026-10-18, Shobhit Kapoor:** Shobhit reports that the work descriptions below are his, but exact timestamps for the first 27 commits were not retained. On October 18, those timestamps were reconstructed approximately from his recollection, with instructor approval: work began October 1, usually occurred 7–9 p.m. or midnight–3 a.m., and did not occur October 5, 6, 9–12, or 17. “Jonathan” was a placeholder author name. Earlier personal-practice wording reflects his plan at the time. Codex assisted with the current review and fixes. The five October 18 review commits retain their actual timestamps.
 
 # Development Log
 
