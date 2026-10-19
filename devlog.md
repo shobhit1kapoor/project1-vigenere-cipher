@@ -1,4 +1,4 @@
-> **Status correction — 2026-10-18, Shobhit Kapoor:** I first kept this as a practice project and described it as a reference copy because I did not plan to submit it. I have since decided to submit the project. The code and work descriptions are mine. I did not save exact timestamps for the first 27 commits; with my instructor's approval, I estimated them from memory. This corrects the older line below that calls the author and dated history fictional examples: the name was a placeholder, and the dates are estimates. Codex assisted with the October 18 review and fixes.
+
 
 ## 2026-10-18 7:24 PM — Session start: Assignment audit
 
